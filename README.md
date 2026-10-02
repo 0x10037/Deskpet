@@ -13,7 +13,6 @@
 ## 📖 Introduction
 
 This is a small pygame deskpet application for Windows only.
-Parts of this project were developed with AI assistance.
 
 ## 📂 Files
 
@@ -49,6 +48,10 @@ Parts of this project were developed with AI assistance.
 - Python 3.11+
 - Pygame-ce
 - Pyinstaller
+
+## Assets Credits
+
+- Pet artwork and animations by **檻江Night Stalker**
 
 ## 📄 License
 
