@@ -1,12 +1,10 @@
 from pygame import image, font
 from pygame._sdl2 import Texture
-from deskpet.constants import SIZE_DEFAULT, FPS_DEFAULT
 from pathlib import Path
 import sys
 
 
 def resource_path(*parts) -> Path:
-    """只读资源目录。开发环境在项目根，打包后在 _MEIPASS。"""
     if getattr(sys, "frozen", False):
         base = Path(sys._MEIPASS)
     else:
@@ -15,7 +13,6 @@ def resource_path(*parts) -> Path:
 
 
 def user_data_path(*parts) -> Path:
-    """可写数据目录。开发环境在项目根，打包后在 exe 旁边。"""
     if getattr(sys, "frozen", False):
         base = Path(sys.executable).parent
     else:
@@ -23,9 +20,7 @@ def user_data_path(*parts) -> Path:
     return base.joinpath(*parts)
 
 
-DEFAULT_CONFIG = {"size": SIZE_DEFAULT, "FPS": FPS_DEFAULT}
-USER_DATA_DIR = user_data_path()          # 可写目录
-ICON_PATH = resource_path("resources", "icon.ico")   # 只读资源
+ICON_PATH = resource_path("resources", "icon.ico")
 
 
 def load_action_images(action, renderer):
